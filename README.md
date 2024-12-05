@@ -1,2 +1,10 @@
-# agent-probe
-This is a SaaS platform for Auditing the Agentic applications or platforms that enterprise is creating.
+# Agent Probe and Auditing Platform
+The Agents Probe & Auditing Platform (APAP) architecture is designed to facilitate the auditing and observability of agentic systems in a modular and infrastructure-agnostic manner. It consists of three primary layers: the agentic infrastructure, the auditing platform, and the user interface.
+
+The agentic infrastructure layer comprises multiple operational building components (OBCs), each containing agents (Agent 1 through Agent N). These agents are configured to execute specific tasks, such as probing or functional workflows, within a RAG (Retrieval-Augmented Generation) pipeline. Each agent communicates with the platform through well-defined interfaces, enabling seamless integration across heterogeneous systems.
+
+The auditing platform acts as the central processing hub and is composed of several interconnected modules. First, the "Auth" module ensures secure and authenticated communication between agents and the platform. The "Agentic Audit Probe" module serves as the primary interface for querying and capturing data from agents. This module interacts with the "Infrastructure Agnostic Observability" component, which collects, correlates, and standardizes telemetry data across varying agentic infrastructures. The observability data is subsequently passed to the "Audit Report Configurator and Generator," where customizable report templates are used to generate comprehensive audit reports. The platform's modular design allows for scalability, flexibility, and ease of configuration.
+
+Finally, the user interface (UI) provides an intuitive interface for end-users to configure agents, define reporting templates, and visualize audit results. Users can interact with the system to configure specific agent tasks, define reporting templates, and access generated audit reports. The UI also facilitates a clear view of the process, showcasing statuses such as "Agent Probing Completed," "Observability Correlation Completed," and "Report Generation."
+
+![Arch](./resources/architecture.png)
